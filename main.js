@@ -101,4 +101,5 @@ function game() {
     if (cardNumber >= 40 && cardNumber <= 52) return 'flower';
   }
   distributeDesks();
+  console.log('hello')
 }
