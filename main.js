@@ -1,4 +1,4 @@
-function game() {
+// function game() {
   let letTopDeck = [];
   const rightTopDeck = [[], [], [], []];
   const underDecks =  [
@@ -25,6 +25,7 @@ function game() {
   };
 
   function newCards() {
+    console.log('newCard')
     for (let i=0;i<=7;i++){
       if(i<=3){
           underDecks[i]=sufferedDeck.splice(0,6);
@@ -102,4 +103,4 @@ function game() {
   }
   distributeDesks();
   console.log('hello')
-}
+// }
