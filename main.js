@@ -63,41 +63,42 @@ function game() {
         underDeckCard.deckNumber = index;
         underDeckCard.innerHTML = `
           <div>
-          <div style=‘display: flex; align-items: center’>
+          <div style='display: flex; align-items: center'>
             <span>${transformNumberToEnglish(
               card % 13
-            )}</span><img style=‘margin-left: 2px’ src=‘./img/${transformNumberToPattern(
+            )}</span><img style='margin-left: 2px' src='./img/${transformNumberToPattern(
               card
-            )}.svg’ />
+            )}.svg' />
           </div>
-          <div style=‘display: flex; align-items: center, position: absolute; bottom: 6px; right: 8px; transform: rotate(180);’>
+          <div style='display: flex; align-items: center, position: absolute; bottom: 6px; right: 8px; transform: rotate(180);'>
             <span>${transformNumberToEnglish(
               card % 13
-            )}</span><img style=‘margin-left: 2px’ src=‘./img/${transformNumberToPattern(
+            )}</span><img style='margin-left: 2px' src='./img/${transformNumberToPattern(
               card
-            )}.svg’ />
+            )}.svg' />
           </div>
           </div>
         `;
       })
     })
-    function transformNumberToEnglish(cardNumber) {
-      switch (cardNumber) {
-        case 0:
-          return 'K';
-        case 1:
-          return 'A';
-        case 11:
-          return 'J';
-        case 12:
-          return 'Q';
-      }
-    }
-    function transformNumberToPattern(cardNumber) {
-      if (cardNumber > 0 && cardNumber <= 13) return 'mushroom';
-      if (cardNumber >= 14 && cardNumber <= 26) return 'heart';
-      if (cardNumber >= 27 && cardNumber <= 39) return 'diamond';
-      if (cardNumber >= 40 && cardNumber <= 52) return 'flower';
+  }
+  function transformNumberToEnglish(cardNumber) {
+    switch (cardNumber) {
+      case 0:
+        return 'K';
+      case 1:
+        return 'A';
+      case 11:
+        return 'J';
+      case 12:
+        return 'Q';
     }
   }
+  function transformNumberToPattern(cardNumber) {
+    if (cardNumber > 0 && cardNumber <= 13) return 'mushroom';
+    if (cardNumber >= 14 && cardNumber <= 26) return 'heart';
+    if (cardNumber >= 27 && cardNumber <= 39) return 'diamond';
+    if (cardNumber >= 40 && cardNumber <= 52) return 'flower';
+  }
+  distributeDesks();
 }
